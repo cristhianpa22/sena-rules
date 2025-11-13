@@ -1,5 +1,5 @@
 import RuleCard from './rulecard';
-export default function RuleList({ rules }) {
+export default function RuleList({ rules, onToggleCompliance}) {
 
     if (!rules || rules.length === 0) {
         return (
@@ -14,11 +14,12 @@ export default function RuleList({ rules }) {
 
     
     return (
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 w-full max-w-7xl">
+        <section id='card' className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 w-full max-w-7xl">
             {rules.map((rule) => (
                 <RuleCard 
                     key={rule.id}          
-                    ruleData={rule}        
+                    ruleData={rule}   
+                    onToggleCompliance={onToggleCompliance}     
                 />
             ))}
         </section>
