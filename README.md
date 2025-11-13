@@ -1,16 +1,138 @@
-# React + Vite
+                                                              **SENA RULES**
+ Sirve como un tablero para ver cuáles son las reglas básicas del SENA que le permite estar pendiente al aprendiz si cumple esas reglas y poder marcar cuáles cumple y cuántas le faltan por cumplir para que el aprendiz esté más atento y tenga algo con el que pueda interactuar.                 
+ <hr>
+ 
+**Inicializar un nuevo proyecto React**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```bash
+npm create vite@latest mi-app -- --template react
+```
 
-Currently, two official plugins are available:
+-Instalar las dependencias de React dándole "Yes" para la instalación o de forma manual con 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+```
+-Se instala la dependencia de Tailwind desde el gestor de paquetes npm 
 
-## React Compiler
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-Configurar el plugin de Tailwind desde vite.config.js
 
-## Expanding the ESLint configuration
+```bash
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Se exporta en index.css
+
+```bash
+@import "tailwindcss";
+```
+-Se crea una carpeta Componentes en la carpeta src y en esa carpeta se crean los componentes que se van a crear para la app.
+
+-Se inicia el servidor para ver los cambios en la app.
+
+```bash
+npm run dev
+```
+<hr>
+
+**Componentes**
+
+```bash
+SearchBar Maneja el estado local del input de búsqueda implementando el filtrado de las tarjetas según lo que el usuario escriba.
+Este crea un array el cual se lo envía al padre para que RuleList lo renderice.
+
+RuleCard Es el componente en el cual se va a mostrar la información quecontiene el dataset (title, category y description) y
+maneja su propio estado local. Cuando se presiona el botón, el estado cambia y se lo notifica al padre App.
+
+RuleList Es el componente que renderiza el array que recibe de SearchBar (filteredRules) y utiliza el método .map para iterar
+y crear instancias de las tarjetas por cada elemento que se encuentra en ese array.
+
+TaskCompleted Recibe el completedCount, calcula y muestra el progreso de las reglas, y cambian de manera dinámica el mensaje y
+el color del componente.
+```
+<hr>
+
+**Estados**
+
+```bash
+allRules: Almacena todas las tarjetas sin renderizar.
+
+filteredRules: Lista las normas que se le mostrarán al usuario, pueden ser ya filtradas o sin filtrar.
+
+completedCount: Es un contador numérico que calcula cuántas normas están ya cumplidas.
+
+searchTerm: El texto que el usuario escribe en el input del buscador.
+
+isCompleted: Es el estado; si se presiona el botón cambia el estado específico de la tarjeta.
+
+```
+**Propiedades (Props)***
+
+```bash
+App pasa filteredRules a RuleList.
+
+RuleList pasa ruleData a cada RuleCard.
+
+App pasa la función onToggleCompliance a RuleList, que a su vez la pasa a RuleCard. Esta es la llave para actualizar el contador global.
+
+```
+
+**Eventos**
+
+```bash
+El evento onChange en el input de SearchBar dispara la función handleSearchChange, que filtra los datos y actualiza el estado
+filteredRules en App.
+
+El evento onClick en el botón de RuleCard dispara su función local toggleCompliance, la cual llama a la callback onToggleCompliance en App.
+
+```
+
+<hr>
+
+**Decisiones de Diseño**
+
+TaskCompleted:
+```bash
+Lo crea porque le parece muy útil ya que le muestra al aprendiz cuántas normas ha cumplido y cuántas le faltan por cumplir. Lo hace de una manera
+atractiva que muestra al aprendiz un mensaje para que termine de cumplir todas las normas y cuando lo hace lo felicita y cambia de color el componente
+haciéndole sentir una satisfacción al usuario al completarlo.
+```
+
+Tips 
+```bash
+Lo cree porque le muestra al aprendiz tips que le sirven para hacer cosas que no hacía o tome un poco de conciencia de que debe seguir los tips que
+se le dan, y sirva para que motive a los aprendices a mejorar.
+```
+
+Header
+```bash
+Lo cree porque da los derechos de autor y también permite navegar mejor por la misma página, facilitando la navegación. También para que el aprendiz
+pueda visitar la página de Sofía Plus y pueda dirigirse a la página para poder observar todas las normas y que sepa todas las normas que debe cumplir
+y que no solo son las 6 reglas que están en la página y que todas las deben seguir.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
