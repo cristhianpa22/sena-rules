@@ -1,4 +1,4 @@
-                                                              **SENA RULES**
+                                                       **SENA RULES**
  Sirve como un tablero para ver cuáles son las reglas básicas del SENA que le permite estar pendiente al aprendiz si cumple esas reglas y poder marcar cuáles cumple y cuántas le faltan por cumplir para que el aprendiz esté más atento y tenga algo con el que pueda interactuar.                 
  <hr>
  
@@ -120,6 +120,29 @@ Lo cree porque da los derechos de autor y también permite navegar mejor por la 
 pueda visitar la página de Sofía Plus y pueda dirigirse a la página para poder observar todas las normas y que sepa todas las normas que debe cumplir
 y que no solo son las 6 reglas que están en la página y que todas las deben seguir.
 ```
+<hr>
+
+**Capturas**
+
+<img width="921" height="515" alt="image" src="https://github.com/user-attachments/assets/9f74af75-1a09-4d8a-b5cb-faa3a58c64f6" />
+
+<img width="921" height="504" alt="image" src="https://github.com/user-attachments/assets/dc61dad5-06e3-475c-9a9b-3a45c6ce3873" />
+
+<img width="921" height="508" alt="image" src="https://github.com/user-attachments/assets/537634e8-9e08-45ef-bc5b-3d5bd96af028" />
+
+<img width="921" height="459" alt="image" src="https://github.com/user-attachments/assets/4bd5279f-961a-4d14-9153-02ea153658ae" />
+
+<img width="921" height="453" alt="image" src="https://github.com/user-attachments/assets/9bcce676-b281-4dbb-8c3f-a6c73037328e" />
+
+<img width="921" height="480" alt="image" src="https://github.com/user-attachments/assets/1db9c221-86ac-4d36-9764-c575f488aa5a" />
+
+<img width="921" height="470" alt="image" src="https://github.com/user-attachments/assets/5a078e81-70e3-4c94-8b23-0c96d219bdbd" />
+
+
+
+
+
+
 
 
 
